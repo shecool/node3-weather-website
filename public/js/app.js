@@ -1,7 +1,7 @@
 console.log('Client side javascript file is loaded.')
 
 
-fetch('http://sandbox-03.yiulai.local:3000/weather?address=Toronto').then((response) => {
+fetch('/weather?address=Toronto').then((response) => {
     response.json().then((data) => {
         
         if(data.error) {
@@ -21,7 +21,7 @@ const messageTwo = document.querySelector('#message-2')
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const location = search.value
-    const url = 'http://sandbox-03.yiulai.local:3000/weather?address=' + location
+    const url = '/weather?address=' + location
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ""
     fetch(url).then((response) => {
