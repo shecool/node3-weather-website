@@ -12,7 +12,7 @@ const forecast = (longitude, latitude, callback) => {
                 summary: body.daily.data[0].summary,
                 temp: body.currently.temperature,
                 chanceofrain: body.currently.precipProbability.body,
-                sunset: body.daily[0].data.sunsetTime
+                sunset: body.daily.data[0].sunsetTime
             })
         }
     })
