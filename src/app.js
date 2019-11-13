@@ -58,8 +58,8 @@ app.get('/weather', (req, res) => {
                 error
             })
         }
-        forecast(longitude, latitude, (error, {summary, temp, chanceofrain}) => {
-            const forecast = summary + ' The temperature is: ' + temp +' degrees. There is a ' + chanceofrain + '% chance of rain.'
+        forecast(longitude, latitude, (error, {summary, temp, chanceofrain, sunset}) => {
+            const forecast = summary + ' The temperature is: ' + temp +' degrees. There is a ' + chanceofrain + '% chance of rain. The sun will set at ' + sunset
             res.send({
                 location,
                 temprature: temp,
