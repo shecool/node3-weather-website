@@ -1,0 +1,1 @@
+The exact match takes priority over the wildcard-matches. For example, when a user requests for atlanta.safemarch.com, a category that contains the exact match, atlanta.safemarch.com takes priority over another category that contains the wildcard-match, .atlanta.safemarch.com or .safemarch.com.  
